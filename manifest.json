@@ -1,0 +1,31 @@
+{
+  "name": "commitbot",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "chrome commit plugin",
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "page_action": {
+    "default_title": "commitbot",
+    "default_icon": "assets/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://club.jd.com/myJdcomments/myJdcomment.action*"
+      ],
+      "js": [
+        "src/public.js",
+        "src/orders.js",
+        "src/photos.js",
+        "src/main.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "notifications"
+  ]
+}
